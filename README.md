@@ -11,12 +11,14 @@ Landing page profissional desenvolvida com Astro.js para apresentação de servi
 ## 📦 Instalação
 
 1. Clone o repositório:
+
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
 ```
 
 2. Instale as dependências:
+
 ```bash
 npm install
 ```
@@ -44,17 +46,22 @@ Os arquivos serão gerados na pasta `dist/`
 ## 📝 Personalização
 
 ### Logo
+
 Substitua o arquivo `public/logo.svg` pelo logo da sua empresa.
 
 ### Imagens
+
 Adicione as imagens dos projetos na pasta `public/images/gallery/`
 
 ### Informações de Contato
+
 Atualize as informações de contato nos seguintes arquivos:
+
 - `src/components/Contact.astro`
 - `src/components/Footer.astro`
 
 ### Cores
+
 As cores podem ser personalizadas no arquivo `tailwind.config.mjs`
 
 ## 📄 Licença

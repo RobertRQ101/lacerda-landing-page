@@ -6,8 +6,8 @@ export default {
       colors: {
         primary: {
           DEFAULT: '#1E3A8A', // Azul principal
-          light: '#3B82F6',   // Azul claro
-          dark: '#1E40AF',    // Azul escuro
+          light: '#3B82F6', // Azul claro
+          dark: '#1E40AF', // Azul escuro
         },
       },
       fontFamily: {
@@ -16,4 +16,4 @@ export default {
     },
   },
   plugins: [],
-} 
+};

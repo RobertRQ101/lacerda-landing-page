@@ -2,17 +2,20 @@
 const services = [
   {
     title: 'Pintura Predial',
-    description: 'Realizamos pintura profissional de prédios residenciais e comerciais, utilizando materiais de alta qualidade e técnicas modernas para garantir um acabamento perfeito.',
+    description:
+      'Realizamos pintura profissional de prédios residenciais e comerciais, utilizando materiais de alta qualidade e técnicas modernas para garantir um acabamento perfeito.',
     icon: '🏢',
   },
   {
     title: 'Reforma de Fachadas',
-    description: 'Especializados em reformas completas de fachadas, incluindo reparos estruturais, limpeza, impermeabilização e pintura, devolvendo a beleza original do seu prédio.',
+    description:
+      'Especializados em reformas completas de fachadas, incluindo reparos estruturais, limpeza, impermeabilização e pintura, devolvendo a beleza original do seu prédio.',
     icon: '🔨',
   },
   {
     title: 'Modernização de Fachadas',
-    description: 'Transformamos fachadas antigas em espaços modernos e atraentes, utilizando técnicas inovadoras e materiais contemporâneos para um visual atualizado.',
+    description:
+      'Transformamos fachadas antigas em espaços modernos e atraentes, utilizando técnicas inovadoras e materiais contemporâneos para um visual atualizado.',
     icon: '✨',
   },
 ];
@@ -20,17 +23,17 @@ const services = [
 
 <section id="servicos" class="py-20 bg-gray-50">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-      Nossos Serviços
-    </h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nossos Serviços</h2>
     <div class="grid md:grid-cols-3 gap-8">
-      {services.map((service) => (
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-          <div class="text-4xl mb-4">{service.icon}</div>
-          <h3 class="text-xl font-semibold mb-4">{service.title}</h3>
-          <p class="text-gray-600">{service.description}</p>
-        </div>
-      ))}
+      {
+        services.map(service => (
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="text-4xl mb-4">{service.icon}</div>
+            <h3 class="text-xl font-semibold mb-4">{service.title}</h3>
+            <p class="text-gray-600">{service.description}</p>
+          </div>
+        ))
+      }
     </div>
   </div>
-</section> 
+</section>

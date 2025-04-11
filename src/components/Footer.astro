@@ -1,39 +1,42 @@
+---
+import { Image } from 'astro:assets';
+---
+
 <footer class="bg-primary text-white py-8">
   <div class="container mx-auto px-4">
     <div class="grid md:grid-cols-3 gap-8">
       <div>
-        <img src="/logo.svg" alt="Logo da empresa" class="h-12 mb-4" />
-        <p class="text-sm">
-          Especialistas em pintura predial, reforma e modernização de fachadas.
-        </p>
+        <div class="flex flex-col">
+          <Image 
+            src="/logo-branco-semfundo.svg" 
+            alt="Logo Lacerda Reformas Prediais"
+            class="w-auto h-16 md:h-20 mb-4"
+            width={250}
+            height={64}
+            sizes="(max-width: 640px) 180px, 250px"
+          />
+          <p class="text-sm">
+            A Lacerda Reformas Prediais transforma fachadas e revitaliza prédios com qualidade e excelência.
+          </p>
+        </div>
       </div>
       <div>
         <h3 class="text-lg font-semibold mb-4">Links Rápidos</h3>
         <ul class="space-y-2">
           <li>
-            <a href="#servicos" class="hover:text-gray-300 transition-colors">
-              Serviços
-            </a>
+            <a href="#servicos" class="hover:text-gray-300 transition-colors"> Serviços</a>
           </li>
           <li>
-            <a href="#diferenciais" class="hover:text-gray-300 transition-colors">
-              Diferenciais
-            </a>
+            <a href="#diferenciais" class="hover:text-gray-300 transition-colors"> Diferenciais</a>
           </li>
           <li>
-            <a href="#galeria" class="hover:text-gray-300 transition-colors">
-              Galeria
-            </a>
+            <a href="#galeria" class="hover:text-gray-300 transition-colors"> Galeria</a>
           </li>
           <li>
-            <a href="#sobre" class="hover:text-gray-300 transition-colors">
-              Sobre
-            </a>
+            <a href="#sobre" class="hover:text-gray-300 transition-colors"> Sobre</a>
           </li>
           <li>
-            <a href="#contato" class="hover:text-gray-300 transition-colors">
-              Contato
-            </a>
+            <a href="#contato" class="hover:text-gray-300 transition-colors"> Contato</a>
           </li>
         </ul>
       </div>
@@ -42,7 +45,7 @@
         <ul class="space-y-2">
           <li>
             <a
-              href="https://instagram.com/suaempresa"
+              href="https://instagram.com/lacerdareformasprediais"
               target="_blank"
               rel="noopener noreferrer"
               class="hover:text-gray-300 transition-colors"
@@ -52,7 +55,7 @@
           </li>
           <li>
             <a
-              href="mailto:contato@suaempresa.com.br"
+              href="mailto:contato@lacerdareformasprediais.com.br"
               class="hover:text-gray-300 transition-colors"
             >
               Email
@@ -60,7 +63,7 @@
           </li>
           <li>
             <a
-              href="https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento para fachada."
+              href="https://wa.me/5511999999999"
               target="_blank"
               rel="noopener noreferrer"
               class="hover:text-gray-300 transition-colors"
@@ -73,8 +76,8 @@
     </div>
     <div class="border-t border-white/20 mt-8 pt-8 text-center text-sm">
       <p>
-        © {new Date().getFullYear()} Sua Empresa. Todos os direitos reservados.
+        © {new Date().getFullYear()} Lacerda Reformas Prediais. Todos os direitos reservados.
       </p>
     </div>
   </div>
-</footer> 
+</footer>
