@@ -1,0 +1,40 @@
+---
+// Array de imagens de exemplo - substitua pelas imagens reais
+const images = [
+  {
+    src: '/images/gallery/1.jpg',
+    alt: 'Projeto de pintura predial',
+  },
+  {
+    src: '/images/gallery/2.jpg',
+    alt: 'Reforma de fachada',
+  },
+  {
+    src: '/images/gallery/3.jpg',
+    alt: 'Modernização de fachada',
+  },
+  // Adicione mais imagens conforme necessário
+];
+---
+
+<section id="galeria" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      Nossos Trabalhos
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {images.map((image) => (
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img
+            src={image.src}
+            alt={image.alt}
+            class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <p class="text-white text-lg font-semibold">{image.alt}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section> 
