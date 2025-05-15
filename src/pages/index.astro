@@ -1,5 +1,5 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
+import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
@@ -11,9 +11,16 @@ import Footer from '../components/Footer.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+const title = "Lacerda Reformas Prediais | Especialistas em Reformas e Manutenção Predial em São Paulo";
+const description = "Empresa líder em reformas e manutenção predial em São Paulo. Oferecemos serviços especializados em pintura, impermeabilização, restauração de fachadas e muito mais. Entre em contato e solicite um orçamento!";
 ---
 
-<MainLayout title="Lacerda - Especialistas em Pintura Predial e Reforma de Fachadas">
+<Layout 
+  title={title}
+  description={description}
+  image="/og-image.jpg"
+>
   <Navigation />
   <main>
     <Hero />
@@ -24,4 +31,4 @@ import Footer from '../components/Footer.astro';
     <Contact />
   </main>
   <Footer />
-</MainLayout>
+</Layout>

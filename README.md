@@ -2,6 +2,8 @@
 
 Landing page profissional desenvolvida com Astro.js para apresentação de serviços de pintura predial, reforma e modernização de fachadas.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5119c61b-fff7-41d3-9ad9-532953cf9b85/deploy-status)](https://app.netlify.com/projects/roaring-sunburst-457f1c/deploys)
+
 ## 🚀 Tecnologias Utilizadas
 
 - [Astro.js](https://astro.build)

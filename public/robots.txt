@@ -1,4 +1,9 @@
+# Allow all crawlers
 User-agent: *
 Allow: /
 
-Sitemap: https://seusite.com.br/sitemap-index.xml 
+# Sitemap location
+Sitemap: https://lacerdareformas.com/sitemap-index.xml
+
+# Optimize crawling
+Crawl-delay: 10 

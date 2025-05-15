@@ -1,11 +1,82 @@
-<!doctype html>
-<html lang="en">
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const { 
+  title = "Lacerda Reformas Prediais | Especialistas em Reformas e Manutenção Predial",
+  description = "Empresa especializada em reformas e manutenção predial, oferecendo serviços de qualidade em pintura, impermeabilização, restauração de fachadas e muito mais. Atendemos em toda região com excelência e profissionalismo.",
+  image = "/og-image.jpg"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.site)} />
+
+    <!-- Outras meta tags importantes -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="author" content="Lacerda Reformas Prediais" />
+    <meta name="keywords" content="reformas prediais, manutenção predial, pintura predial, impermeabilização, restauração de fachadas, reforma de edifícios, manutenção de condomínios" />
+    
+    <!-- Verificação de propriedade do site -->
+    <meta name="google-site-verification" content="seu-código-aqui" />
+
+    <!-- Meta tag de segurança -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; connect-src 'self';">
+
+    <!-- Schema.org para Rich Snippets -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Lacerda Reformas Prediais",
+        "image": "/logo-azul-semfundo.svg",
+        "description": "{description}",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-23.550520",
+          "longitude": "-46.633308"
+        },
+        "url": "https://lacerdareformas.com",
+        "telephone": "+5511XXXXXXXXX",
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "email": "contato@lacerdareformas.com"
+      }
+    </script>
   </head>
   <body>
     <slot />
